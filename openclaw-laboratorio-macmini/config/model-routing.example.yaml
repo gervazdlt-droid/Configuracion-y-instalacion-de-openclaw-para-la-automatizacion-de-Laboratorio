@@ -1,0 +1,10 @@
+# Política ilustrativa; adapta la sintaxis al router de tu instalación.
+routing:
+  sensitive_data: ollama/qwen2.5:7b
+  code: ollama/qwen2.5-coder:7b
+  fast_classification: ollama/llama3.2:3b
+  embeddings: ollama/nomic-embed-text
+  long_authorized_document: gemini/REVISAR_MODELO
+fallback:
+  allow_cloud_for_sensitive_data: false
+  require_human_confirmation: true

@@ -1,0 +1,26 @@
+{
+  "comment": "PLANTILLA CONCEPTUAL: adapta las claves a la versión instalada de OpenClaw.",
+  "agent": {
+    "name": "Nucleo",
+    "language": "es",
+    "workspace": "~/LabAssistant/workspace",
+    "systemPromptFile": "config/lab-assistant-prompt.md"
+  },
+  "models": {
+    "localDefault": "ollama/qwen2.5:7b",
+    "localCode": "ollama/qwen2.5-coder:7b",
+    "localFast": "ollama/llama3.2:3b",
+    "cloudOptional": "gemini/REVISAR_MODELO"
+  },
+  "permissions": {
+    "writePaths": ["~/LabAssistant/workspace/results", "~/LabAssistant/workspace/projects"],
+    "readOnlyPaths": ["~/LabAssistant/workspace/inbox"],
+    "requireConfirmationFor": ["external_web_submission", "delete", "publish", "send_external_message"]
+  },
+  "discord": {
+    "enabled": false,
+    "requireMention": true,
+    "allowedGuildIds": ["YOUR_GUILD_ID"],
+    "allowedChannelIds": ["YOUR_CHANNEL_ID"]
+  }
+}
